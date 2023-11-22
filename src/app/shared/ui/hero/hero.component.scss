@@ -1,0 +1,59 @@
+.hero {
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-content {
+    max-width: 64%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin: 0 0 60px 0;
+    font-size: 55px;
+    color: #b99150;
+
+    &_orange {
+      color: #ffaf18;
+    }
+  }
+
+  &-offers-list {
+    margin: 0 0 60px 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    list-style-type: none;
+  }
+
+  &__offer {
+    display: flex;
+    align-items: center;
+    width: 306px;
+
+    &-image {
+      margin-right: 15px;
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+
+    &-title {
+      margin: 0 0 5px 0;
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #ffaf18;
+    }
+
+    &-description {
+      margin: 0;
+      font-size: 16px;
+      line-height: 16px;
+      color: #b99150;
+    }
+  }
+}
