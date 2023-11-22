@@ -1,0 +1,12 @@
+<article class="card">
+  <img
+    [src]="'./assets/images/pizzas/' + image + '.png'"
+    width="214"
+    height="152"
+    alt="Изображение карточки"
+    class="card__image"
+  />
+  <h4 class="card__title">{{ title }}</h4>
+  <p class="card__description">{{ description }}</p>
+  <app-button class="card__button" [title]="btnTitle"></app-button>
+</article>

@@ -1,0 +1,27 @@
+.pizzas {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin: 0 0 65px 0;
+    align-self: center;
+    font-size: 35px;
+    color: #bd975c;
+  }
+
+  .pizzas-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    list-style-type: none;
+
+    &__item {
+      max-width: 282px;
+      width: 100%;
+    }
+  }
+}
