@@ -1,0 +1,9 @@
+.footer {
+  &-content {
+    display: flex;
+
+    app-footer-info {
+      margin-right: 125px;
+    }
+  }
+}

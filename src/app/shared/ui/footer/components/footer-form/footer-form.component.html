@@ -1,0 +1,22 @@
+<form class="footer-form" [formGroup]="footerFormGroup">
+  <input
+    type="text"
+    class="footer-form__field"
+    placeholder="Ваше имя"
+    formControlName="name"
+    noDotField
+  />
+  <input
+    type="text"
+    class="footer-form__field"
+    placeholder="Адрес доставки"
+    formControlName="address"
+  />
+  <input
+    type="text"
+    class="footer-form__field"
+    placeholder="Телефон"
+    formControlName="telephone"
+  />
+  <app-button [title]="'Оформить заказ'"></app-button>
+</form>

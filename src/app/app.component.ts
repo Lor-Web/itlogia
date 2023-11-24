@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import {
   CardListComponent,
+  FooterComponent,
   HeaderBarComponent,
   HeroComponent,
 } from './shared/ui';
@@ -16,6 +17,7 @@ import {
     HeaderBarComponent,
     HeroComponent,
     CardListComponent,
+    FooterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

@@ -1,0 +1,26 @@
+:host {
+  display: block;
+  max-width: 31%;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    margin: 0 0 70px 0;
+    font-size: 35px;
+    color: #bd975c;
+
+    &_orange {
+      color: #ffaf18;
+    }
+  }
+
+  &__description {
+    margin: 0;
+    color: #bd975c;
+    font-size: 16px;
+    line-height: 150%;
+  }
+}

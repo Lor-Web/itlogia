@@ -1,0 +1,23 @@
+:host {
+  display: flex;
+  align-items: flex-end;
+}
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  &__field {
+    padding: 0 25px;
+    width: 330px;
+    height: 60px;
+    color: #cba86e;
+    background-color: #fff;
+    border: 1px solid #bd975c;
+
+    &::placeholder {
+      color: inherit;
+    }
+  }
+}
