@@ -8,6 +8,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { NoDotInputDirective } from '../../utils';
+import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
 
 @Component({
   selector: 'app-footer-form',
@@ -17,8 +18,9 @@ import { NoDotInputDirective } from '../../utils';
     ReactiveFormsModule,
     ButtonComponent,
     NoDotInputDirective,
+    NgxMaskDirective,
   ],
-  providers: [],
+  providers: [provideNgxMask()],
   templateUrl: './footer-form.component.html',
   styleUrl: './footer-form.component.scss',
 })
