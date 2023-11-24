@@ -6,12 +6,56 @@
     formControlName="name"
     noDotField
   />
+
+  <ng-container
+    *ngIf="
+      footerFormGroup.get('name')?.invalid &&
+      (footerFormGroup.get('name')?.dirty ||
+        footerFormGroup.get('name')?.touched)
+    "
+  >
+    <span
+      class="footer-form__error"
+      *ngIf="footerFormGroup.get('name')?.hasError('minlength')"
+    >
+      Минимальная для 3 символа
+    </span>
+    <span
+      class="footer-form__error"
+      *ngIf="footerFormGroup.get('name')?.hasError('required')"
+    >
+      Это поле обязательно для заполнения
+    </span>
+  </ng-container>
+
   <input
     type="text"
     class="footer-form__field"
     placeholder="Адрес доставки"
     formControlName="address"
   />
+
+  <ng-container
+    *ngIf="
+      footerFormGroup.get('address')?.invalid &&
+      (footerFormGroup.get('address')?.dirty ||
+        footerFormGroup.get('address')?.touched)
+    "
+  >
+    <span
+      class="footer-form__error"
+      *ngIf="footerFormGroup.get('address')?.hasError('minlength')"
+    >
+      Минимальная для 3 символа
+    </span>
+    <span
+      class="footer-form__error"
+      *ngIf="footerFormGroup.get('address')?.hasError('required')"
+    >
+      Это поле обязательно для заполнения
+    </span>
+  </ng-container>
+
   <input
     type="text"
     class="footer-form__field"
@@ -20,5 +64,30 @@
     mask="(000) 000-0000"
     prefix="+7 "
   />
-  <app-button [title]="'Оформить заказ'"></app-button>
+
+  <ng-container
+    *ngIf="
+      footerFormGroup.get('telephone')?.invalid &&
+      (footerFormGroup.get('telephone')?.dirty ||
+        footerFormGroup.get('telephone')?.touched)
+    "
+  >
+    <span
+      class="footer-form__error"
+      *ngIf="footerFormGroup.get('telephone')?.hasError('mask')"
+    >
+      Пример валидного телефона - +7 999 999 99 99
+    </span>
+    <span
+      class="footer-form__error"
+      *ngIf="footerFormGroup.get('telephone')?.hasError('required')"
+    >
+      Это поле обязательно для заполнения
+    </span>
+  </ng-container>
+
+  <app-button
+    [title]="'Оформить заказ'"
+    [disabled]="footerFormGroup.invalid"
+  ></app-button>
 </form>

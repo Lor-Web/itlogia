@@ -8,4 +8,10 @@
   border: none;
   outline: none;
   cursor: pointer;
+
+  &:disabled {
+    pointer-events: none;
+    background-color: grey;
+    cursor: default;
+  }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../../../button';
 import {
@@ -24,13 +24,15 @@ import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
   templateUrl: './footer-form.component.html',
   styleUrl: './footer-form.component.scss',
 })
-export class FooterFormComponent {
+export class FooterFormComponent implements OnInit {
   public footerFormGroup = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(3)]),
     address: new FormControl('', [
       Validators.required,
       Validators.minLength(3),
     ]),
-    telephone: new FormControl(''),
+    telephone: new FormControl('', [Validators.required]),
   });
+
+  ngOnInit(): void {}
 }
