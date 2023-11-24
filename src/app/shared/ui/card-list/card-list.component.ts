@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardComponent } from '../card/card.component';
+import { PizzaCard } from '../../types';
 
 @Component({
   selector: 'app-card-list',
@@ -9,4 +10,6 @@ import { CardComponent } from '../card/card.component';
   templateUrl: './card-list.component.html',
   styleUrl: './card-list.component.scss',
 })
-export class CardListComponent {}
+export class CardListComponent {
+  @Input({ required: true }) items!: PizzaCard[];
+}

@@ -2,8 +2,13 @@
   <div class="container">
     <h2 class="pizzas__title">Выберите свою любимую пиццуcd</h2>
     <ul class="pizzas-list">
-      <li class="pizzas-list__item">
-        <app-card></app-card>
+      <li class="pizzas-list__item" *ngFor="let item of items">
+        <app-card
+          [image]="item.image"
+          [title]="item.title"
+          [description]="item.description"
+          [btnTitle]="item.btnTitle"
+        ></app-card>
       </li>
     </ul>
   </div>

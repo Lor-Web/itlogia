@@ -20,6 +20,7 @@
     list-style-type: none;
 
     &__item {
+      display: flex;
       max-width: 282px;
       width: 100%;
     }
