@@ -1,3 +1,4 @@
 <button class="base-button" [disabled]="disabled" matRipple>
+  <mat-spinner class="base-button__loader" *ngIf="isLoading"></mat-spinner>
   <b>{{ title }}</b>
 </button>

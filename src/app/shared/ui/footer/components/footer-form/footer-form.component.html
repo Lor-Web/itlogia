@@ -1,4 +1,4 @@
-<form class="footer-form" [formGroup]="footerFormGroup">
+<form class="footer-form" [formGroup]="footerFormGroup" (ngSubmit)="sendForm()">
   <input
     type="text"
     class="footer-form__field"
@@ -89,5 +89,6 @@
   <app-button
     [title]="'Оформить заказ'"
     [disabled]="footerFormGroup.invalid"
+    [isLoading]="!!(footerLoading$ | async)"
   ></app-button>
 </form>

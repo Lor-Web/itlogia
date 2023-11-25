@@ -7,6 +7,11 @@ import {
   catalogReducer,
 } from './pages/catalog/store/catalog.reducer';
 import { CatalogEffects } from './pages/catalog/store/catalog.effects';
+import {
+  footerFormFeatureKey,
+  footerFormReducer,
+} from './shared/store/footer-form/footer-form.reducer';
+import { FooterFormEffects } from './shared/store/footer-form/footer-form.effects';
 
 export const routes: Routes = [
   {
@@ -21,6 +26,10 @@ export const routes: Routes = [
     path: '',
     redirectTo: '/catalog',
     pathMatch: 'full',
+    providers: [
+      provideState({ name: footerFormFeatureKey, reducer: footerFormReducer }),
+      provideEffects(FooterFormEffects),
+    ],
   },
   { path: '**', component: NotFoundComponent },
 ];

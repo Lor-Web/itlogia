@@ -5,6 +5,7 @@
     height="152"
     alt="Изображение карточки"
     class="card__image"
+    (click)="openImage('./assets/images/pizzas/' + image + '.png')"
   />
   <h4 class="card__title">{{ title }}</h4>
   <p class="card__description">{{ description }}</p>
