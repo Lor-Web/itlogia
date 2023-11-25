@@ -1,9 +1,26 @@
 .footer {
+  padding-bottom: 159px;
+  display: flex;
+
+  .container {
+    position: relative;
+  }
+
   &-content {
+    position: relative;
+    z-index: 1;
     display: flex;
 
     app-footer-info {
       margin-right: 125px;
     }
+  }
+
+  &__image {
+    z-index: -1;
+
+    position: absolute;
+    bottom: -20px;
+    right: -115px;
   }
 }
